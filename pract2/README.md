@@ -1,17 +1,3 @@
----
-id: Lab_Practice_2_System_Functions_in_Assembly
-aliases:
-  - Lab 02
-  - MIPS System Functions
-  - System Calls
-tags:
-  - Computer Organization
-  - MIPS
-  - Lab
-  - System Calls
-  - Assembly
----
-
 # Lab 2 - System Functions in Assembly (MIPS)
 
 ## Parity Bit
