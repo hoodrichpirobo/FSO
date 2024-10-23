@@ -6,7 +6,7 @@ int Number;
 
 int main()
 {
-    int i;
+    int i
 
     Number=N;
 

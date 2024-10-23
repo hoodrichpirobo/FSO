@@ -10,10 +10,10 @@ int main()
 
     Number=N;
 
-    printf("  The first %d natural numbers are:\n", Number);
+    printf("  The first %f natural numbers are:\n", Number);
     for( i=0; i<Number; i++)
     {
-        printf("    %d \n", i);
+        printf("    %f \n", i);
     }
 
     printf("BYE\n");

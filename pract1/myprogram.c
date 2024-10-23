@@ -1,6 +1,7 @@
-#include <stdio.h>
+#include<stdio.h>
 
-void main()
+int main()
 {
-    printf("Hello World !");
+    printf("To check the integer returned you can do 'echo $?'\n");
+    return 1;
 }

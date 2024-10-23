@@ -4,7 +4,7 @@
 
 int Number;
 
-int main()
+int many()
 {
     int i;
 

@@ -5,50 +5,58 @@ float Balance;
 
 int main()
 {
-    int operation, value;
+    int operation;
     float income, withdraw;
 
     printf("\nWelcome to the FSO ATM\n");
-    Balance=InitBalance;
-    operation=0;
-    printf("\nIndicate operation to do:\n");
-    printf(" 1.Cash Income\n 2.Cash Withdrawal\n 3.Balance Enquiry\n");
-    printf(" 4.Account activity\n 5.Change PIN\n 6.Exit\n\n");
-    printf(" Operation: ");
-    value=scanf("%d", &operation);
+    Balance = InitBalance;
+    operation = 0;
 
-    while(operation != 6){
-        switch(operation) {
+    printf("\nIndicate operation to do:\n");
+    printf(" 1. Cash Income\n 2. Cash Withdrawal\n 3. Balance Enquiry\n");
+    printf(" 4. Account Activity\n 5. Change PIN\n 6. Exit\n\n");
+    printf(" Operation: ");
+    scanf("%d", &operation); 
+
+    while(operation != 6)
+    {
+        switch (operation)
+        {
             case 1:
                 printf(" Cash Income\n");
-                printf("\n Enter the amount to deposit:");
-                 scanf("%f", &income);
-                 Balance=Balance+income;
-                printf(" Succesful income\n");
+                printf("\n Enter the amount to deposit: ");
+                scanf("%f", &income);
+                Balance = Balance + income;
+                printf(" Successful income\n");
                 break;
 
             case 2:
-                printf(" Cash withdrawal\n");
+                printf(" Cash Withdrawal\n");
                 printf("\n Enter the amount to withdraw: ");
                 scanf("%f", &income);
 
-                if (Balance>income) {
-                    Balance=Balance-income;
-                }else{
-                    printf(" Operation not allowed\n");
-                    printf(" Not enough cash\n");
+                switch (Balance > income)
+                {
+                    case 1:
+                        Balance = Balance - income;
+                        break;
+                    case 0:
+                        printf(" Operation not allowed\n");
+                        printf("   Not enough cash\n");
+                        break;
                 }
                 break;
 
             case 3:
                 printf(" Balance Enquiry\n");
-                printf("\n\n Current Balance: %.2f Euros", Balance);               
+                printf("\nCurrent Balance: %.2f Euros\n", Balance);
                 break;
+
             case 4:
             case 5:
-                printf(" This operation is not implemented");
+                printf(" This operation is not implemented\n");
                 break;
-            
+
             case 6:
                 printf(" EXIT\n");
                 break;
@@ -59,13 +67,14 @@ int main()
         }
 
         printf("\nIndicate operation to do:\n");
-        printf(" 1.Cash Income\n 2.Cash Withdrawal\n 3.Balance Enquiry\n");
-        printf(" 4.Account activity\n 5.Change PIN\n 6.Exit\n\n");
+        printf(" 1. Cash Income\n 2. Cash Withdrawal\n 3. Balance Enquiry\n");
+        printf(" 4. Account Activity\n 5. Change PIN\n 6. Exit\n\n");
         printf(" Operation: ");
-        value=scanf("%d", &operation);
+        scanf("%d", &operation); 
     }
 
     printf("\n\n Current Balance: %.2f Euros", Balance);
     printf("\n\n Thanks \n\n");
-     return(0);
+
+    return 0;
 }
